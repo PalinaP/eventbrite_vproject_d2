@@ -10,6 +10,11 @@
   </head>
 
   <body>
+
     <%= yield %>
+    <!-- a conserver seulement si utilisé tel quel, ou à SUPPRIMER -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
   </body>
 </html>
