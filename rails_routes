@@ -1,4 +1,7 @@
-                    Prefix Verb   URI Pattern                                                                              Controller#Action
+
+
+
+  Prefix Verb   URI Pattern                                                                              Controller#Action
                      root GET    /                                                                                        events#index
                    events GET    /events(.:format)                                                                        events#index
                           POST   /events(.:format)                                                                        events#create
@@ -8,6 +11,14 @@
                           PATCH  /events/:id(.:format)                                                                    events#update
                           PUT    /events/:id(.:format)                                                                    events#update
                           DELETE /events/:id(.:format)                                                                    events#destroy
+                    users GET    /users(.:format)                                                                         users#index
+                          POST   /users(.:format)                                                                         users#create
+                 new_user GET    /users/new(.:format)                                                                     users#new
+                edit_user GET    /users/:id/edit(.:format)                                                                users#edit
+                     user GET    /users/:id(.:format)                                                                     users#show
+                          PATCH  /users/:id(.:format)                                                                     users#update
+                          PUT    /users/:id(.:format)                                                                     users#update
+                          DELETE /users/:id(.:format)                                                                     users#destroy
          new_user_session GET    /users/sign_in(.:format)                                                                 devise/sessions#new
              user_session POST   /users/sign_in(.:format)                                                                 devise/sessions#create
      destroy_user_session DELETE /users/sign_out(.:format)                                                                devise/sessions#destroy
@@ -28,5 +39,4 @@ rails_blob_representation GET    /rails/active_storage/representations/:signed_b
        rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
 update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
      rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
-
 
