@@ -17,7 +17,7 @@ User.destroy_all
     last_name:Faker::Name.last_name,
     description:Faker::Alphanumeric.alpha(number: 30),
     email:Faker::Internet.email,
-    encrypted_password:Faker::Alphanumeric.alpha(number: 10)
+    password:Faker::Alphanumeric.alpha(number: 15)
   )
 end
 
