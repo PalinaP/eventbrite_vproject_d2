@@ -1,6 +1,13 @@
- Prefix Verb   URI Pattern                                                                              Controller#Action
+                    Prefix Verb   URI Pattern                                                                              Controller#Action
                      root GET    /                                                                                        events#index
-             events_index GET    /events/index(.:format)                                                                  events#index
+                   events GET    /events(.:format)                                                                        events#index
+                          POST   /events(.:format)                                                                        events#create
+                new_event GET    /events/new(.:format)                                                                    events#new
+               edit_event GET    /events/:id/edit(.:format)                                                               events#edit
+                    event GET    /events/:id(.:format)                                                                    events#show
+                          PATCH  /events/:id(.:format)                                                                    events#update
+                          PUT    /events/:id(.:format)                                                                    events#update
+                          DELETE /events/:id(.:format)                                                                    events#destroy
          new_user_session GET    /users/sign_in(.:format)                                                                 devise/sessions#new
              user_session POST   /users/sign_in(.:format)                                                                 devise/sessions#create
      destroy_user_session DELETE /users/sign_out(.:format)                                                                devise/sessions#destroy
@@ -21,4 +28,5 @@ rails_blob_representation GET    /rails/active_storage/representations/:signed_b
        rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
 update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
      rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+
 
