@@ -6,7 +6,7 @@
     <!-- form to display private data -->
     <div class="card bg-light mb-3" style="width: 70%;">
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Prénom : <%=@user.first_name%></li>
+        <li class="list-group-item">Prénom : <%=current_user.first_name%></li>
         <li class="list-group-item">Nom : <%=current_user.last_name%></li>
         <li class="list-group-item">Description : <%=current_user.description%></li>
         <li class="list-group-item">Email : <%=current_user.email%></li>
